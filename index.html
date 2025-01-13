@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+# Rewriting the HTML file to save enhanced content again
+enhanced_file_path = "/mnt/data/smart_ai_integration_enhanced.html"
+
+enhanced_html_content = """<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,127 +9,233 @@
     <title>Smart AI Integration</title>
     <style>
         body {
-            font-family: 'Open Sans', Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a;
-            color: #f5f5f5;
+            background-color: #fff;
+            color: #1d1d1f;
         }
         header {
-            background-color: #0b3d91;
-            color: #f5f5f5;
-            padding: 20px;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            padding: 40px 20px;
             text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #081f4d;
+            align-items: center;
+            background-color: #f5f5f7;
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         }
         nav a {
-            color: #f5f5f5;
+            color: #1d1d1f;
             text-decoration: none;
             margin: 0 15px;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 1rem;
         }
         nav a:hover {
             text-decoration: underline;
         }
         .container {
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        h1 {
-            font-family: 'Montserrat', Arial, sans-serif;
-            color: #ffc107;
-        }
-        h2 {
-            border-bottom: 2px solid #ffc107;
-            padding-bottom: 5px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #fff;
-            background-color: #ffc107;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background-color: #e0a800;
-        }
-        footer {
-            background-color: #081f4d;
-            color: #f5f5f5;
+        .section {
             text-align: center;
-            padding: 10px 0;
+            padding: 60px 20px;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #6e6e73;
+        }
+        .bubble-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .bubble {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #f5f5f7;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .bubble img {
+            width: 80px;
+            height: 80px;
+        }
+        .bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .info {
+            padding: 20px;
+            background-color: #f5f5f7;
             margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .info h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .info p {
+            font-size: 1rem;
+            color: #6e6e73;
+            margin-bottom: 10px;
         }
         .pricing {
-            background-color: #2a2a2a;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         .pricing h2 {
-            color: #ffc107;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
-        .pricing p {
-            font-size: 18px;
-            margin: 10px 0;
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        .pricing .price {
-            font-size: 24px;
+        .pricing-card {
+            background-color: #f5f5f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .pricing-card p {
+            font-size: 1rem;
+            color: #6e6e73;
+            margin-bottom: 15px;
+        }
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0071e3;
+            margin-bottom: 10px;
+        }
+        .contact-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #0071e3;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #ffc107;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .contact-button:hover {
+            background-color: #005bb5;
+        }
+        footer {
+            background-color: #f5f5f7;
+            color: #6e6e73;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
         }
     </style>
+    <script>
+        function showInfo(title, content) {
+            const infoTitle = document.getElementById("info-title");
+            const infoContent = document.getElementById("info-content");
+            infoTitle.textContent = title;
+            infoContent.innerHTML = content;
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Smart AI Integration</h1>
-        <p>Accélérez votre croissance avec des solutions IA sur mesure.</p>
+        <p>Aidez votre entreprise à adopter l'intelligence artificielle et à former vos employés.</p>
     </header>
     <nav>
         <a href="#services">Services</a>
-        <a href="#methodologie">Notre Approche</a>
+        <a href="#methodologie">Approche</a>
+        <a href="#ia">Nos IA</a>
         <a href="#pricing">Tarifs</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
-        <section id="services">
-            <h2>Nos Services</h2>
-            <p>Nous proposons des solutions complètes pour intégrer l'intelligence artificielle dans votre entreprise :</p>
-            <ul>
-                <li>Audit des processus d'entreprise pour identifier les opportunités d'automatisation.</li>
-                <li>Développement et intégration de modèles d'IA adaptés (analyse prédictive, traitement des données).</li>
-                <li>Mise en place de solutions pour optimiser la production et la gestion.</li>
-                <li>Support technique continu et mises à jour des systèmes IA.</li>
-            </ul>
-        </section>
-        <section id="methodologie">
-            <h2>Notre Approche</h2>
-            <p>Nous aidons les entreprises à exploiter l'IA en suivant une méthodologie structurée :</p>
-            <ol>
-                <li><strong>Analyse des besoins :</strong> Compréhension approfondie de vos objectifs et défis.</li>
-                <li><strong>Développement de solutions :</strong> Création de modèles IA sur mesure pour répondre à vos besoins spécifiques.</li>
-                <li><strong>Implémentation :</strong> Intégration des solutions IA dans vos systèmes existants.</li>
-                <li><strong>Suivi :</strong> Formation de votre équipe technique et maintenance continue pour garantir des performances optimales.</li>
-            </ol>
+        <section id="ia" class="section">
+            <h2>Nos Solutions IA</h2>
+            <p>Cliquez sur une bulle pour découvrir les détails de chaque solution IA :</p>
+            <div class="bubble-container">
+                <div class="bubble" onclick="showInfo('Analyse Prédictive', '<p>Optimisez vos décisions grâce à des modèles prédictifs avancés adaptés à votre secteur.</p><p>Applications : gestion de la chaîne d\\'approvisionnement, prévisions de ventes, maintenance prédictive.</p><p>Bénéfices : réduction des coûts, amélioration de la précision des prévisions.</p><p>Formation incluse : Formation des responsables aux outils de prévision.</p>')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" alt="Loupe noire">
+                </div>
+                <div class="bubble" onclick="showInfo('Automatisation des Tâches', '<p>Réduisez les coûts et améliorez l\\'efficacité avec l\\'automatisation intelligente de vos processus.</p><p>Applications : traitement des documents, gestion des flux de travail, support client automatisé.</p><p>Bénéfices : gain de temps, réduction des erreurs humaines.</p><p>Formation incluse : Formation des opérateurs sur les workflows automatisés.</p>')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" alt="Engrenage noir">
+                </div>
+                <div class="bubble" onclick="showInfo('Traitement des Données', '<p>Exploitez la puissance des données avec des outils d\\'analyse et de gestion avancés.</p><p>Applications : analyse de données massives, extraction d\\'informations, visualisation des données.</p><p>Bénéfices : meilleure prise de décision, détection rapide des anomalies.</p><p>Formation incluse : Formation des analystes sur les outils de visualisation et d\\'analyse.</p>')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Graphique noir">
+                </div>
+            </div>
+            <div class="info">
+                <h3 id="info-title">Informations</h3>
+                <div id="info-content">Cliquez sur une bulle pour afficher les détails.</div>
+            </div>
         </section>
         <section id="pricing" class="pricing">
             <h2>Tarifs</h2>
-            <p>Nous proposons une tarification simple et accessible pour nos services d'intégration d'IA :</p>
-            <p><span class="price">100 €</span> pour une installation complète de l'IA dans votre entreprise.</p>
-            <p>Ce tarif inclut l'analyse de vos besoins, l'installation et une formation initiale.</p>
+            <div class="pricing-table">
+                <div class="pricing-card">
+                    <h3>Analyse Prédictive</h3>
+                    <p>Modèles prédictifs avancés pour votre entreprise, accompagnés de formation.</p>
+                    <p class="price">200 €</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Automatisation des Tâches</h3>
+                    <p>Automatisation intelligente pour des processus plus efficaces, avec support technique.</p>
+                    <p class="price">300 €</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Traitement des Données</h3>
+                    <p>Outils avancés pour analyser et visualiser vos données, avec formation spécialisée.</p>
+                    <p class="price">250 €</p>
+                </div>
+            </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contactez-nous</h2>
-            <p>Pour discuter de vos besoins en intelligence artificielle ou demander un devis, contactez-nous :</p>
-            <p>Email : <a href="mailto:smartaiintegration@gmail.com" style="color: #ffc107;">smartaiintegration@gmail.com</a></p>
+            <a href="mailto:smartaiintegration@gmail.com" class="contact-button">Envoyer un Email</a>
         </section>
     </div>
     <footer>
@@ -134,3 +243,9 @@
     </footer>
 </body>
 </html>
+"""
+
+with open(enhanced_file_path, "w") as file:
+    file.write(enhanced_html_content)
+
+enhanced_file_path
