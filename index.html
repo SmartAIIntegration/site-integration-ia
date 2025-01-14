@@ -1,12 +1,12 @@
-# Rewriting the HTML file to save enhanced content again
-enhanced_file_path = "/mnt/data/smart_ai_integration_enhanced.html"
+# Save the updated HTML file with the corrected text and additional details
+updated_html_path = "/mnt/data/ai_integration_updated.html"
 
-enhanced_html_content = """<!DOCTYPE html>
+updated_html_content = """<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart AI Integration</title>
+    <title>AI Integration</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -113,14 +113,6 @@ enhanced_html_content = """<!DOCTYPE html>
             color: #6e6e73;
             margin-bottom: 10px;
         }
-        .pricing {
-            margin-top: 40px;
-        }
-        .pricing h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
         .pricing-table {
             display: flex;
             justify-content: center;
@@ -134,6 +126,12 @@ enhanced_html_content = """<!DOCTYPE html>
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 300px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
         .pricing-card h3 {
             font-size: 1.5rem;
@@ -179,16 +177,20 @@ enhanced_html_content = """<!DOCTYPE html>
             infoTitle.textContent = title;
             infoContent.innerHTML = content;
         }
+        function showPricingInfo(title, content) {
+            const infoTitle = document.getElementById("pricing-info-title");
+            const infoContent = document.getElementById("pricing-info-content");
+            infoTitle.textContent = title;
+            infoContent.innerHTML = content;
+        }
     </script>
 </head>
 <body>
     <header>
-        <h1>Smart AI Integration</h1>
+        <h1>AI Integration</h1>
         <p>Aidez votre entreprise à adopter l'intelligence artificielle et à former vos employés.</p>
     </header>
     <nav>
-        <a href="#services">Services</a>
-        <a href="#methodologie">Approche</a>
         <a href="#ia">Nos IA</a>
         <a href="#pricing">Tarifs</a>
         <a href="#contact">Contact</a>
@@ -198,13 +200,13 @@ enhanced_html_content = """<!DOCTYPE html>
             <h2>Nos Solutions IA</h2>
             <p>Cliquez sur une bulle pour découvrir les détails de chaque solution IA :</p>
             <div class="bubble-container">
-                <div class="bubble" onclick="showInfo('Analyse Prédictive', '<p>Optimisez vos décisions grâce à des modèles prédictifs avancés adaptés à votre secteur.</p><p>Applications : gestion de la chaîne d\\'approvisionnement, prévisions de ventes, maintenance prédictive.</p><p>Bénéfices : réduction des coûts, amélioration de la précision des prévisions.</p><p>Formation incluse : Formation des responsables aux outils de prévision.</p>')">
+                <div class="bubble" onclick="showInfo('Analyse Prédictive', '<p>L\\'analyse prédictive utilise des modèles avancés pour analyser les données passées et anticiper les tendances futures.</p><p><strong>Exemple d\\'intégration :</strong> Une entreprise de e-commerce peut utiliser l\\'analyse prédictive pour prévoir les comportements d\\'achat et ajuster son inventaire. Un service de logistique peut anticiper les retards en fonction des données historiques.</p><p><strong>Applications :</strong> gestion des ressources humaines (prédiction des besoins de recrutement), optimisation de la chaîne d\\'approvisionnement, maintenance prédictive pour les machines.</p><p><strong>Bénéfices :</strong> Réduction des coûts, amélioration des performances, meilleure prise de décision grâce à des informations basées sur des données fiables.</p><p><strong>Formation incluse :</strong> Formation des responsables aux outils de prévision avancés.</p>')">
                     <img src="https://cdn-icons-png.flaticon.com/512/84/84380.png" alt="Loupe noire">
                 </div>
-                <div class="bubble" onclick="showInfo('Automatisation des Tâches', '<p>Réduisez les coûts et améliorez l\\'efficacité avec l\\'automatisation intelligente de vos processus.</p><p>Applications : traitement des documents, gestion des flux de travail, support client automatisé.</p><p>Bénéfices : gain de temps, réduction des erreurs humaines.</p><p>Formation incluse : Formation des opérateurs sur les workflows automatisés.</p>')">
+                <div class="bubble" onclick="showInfo('Automatisation des Tâches', '<p>L\\'automatisation des tâches transforme les processus répétitifs en flux de travail efficaces et sans intervention manuelle.</p><p><strong>Exemple d\\'intégration :</strong> Une entreprise peut automatiser le traitement des factures en utilisant des logiciels capables de lire les données et de les enregistrer directement dans un système ERP. Les centres d\\'appels peuvent intégrer des chatbots pour gérer les demandes simples des clients.</p><p><strong>Applications :</strong> traitement des commandes, gestion des flux de travail complexes, automatisation des réponses aux clients.</p><p><strong>Bénéfices :</strong> Augmentation de la productivité, réduction des délais d\\'exécution, minimisation des erreurs humaines.</p><p><strong>Formation incluse :</strong> Formation des équipes pour gérer et optimiser les workflows automatisés.</p>')">
                     <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" alt="Engrenage noir">
                 </div>
-                <div class="bubble" onclick="showInfo('Traitement des Données', '<p>Exploitez la puissance des données avec des outils d\\'analyse et de gestion avancés.</p><p>Applications : analyse de données massives, extraction d\\'informations, visualisation des données.</p><p>Bénéfices : meilleure prise de décision, détection rapide des anomalies.</p><p>Formation incluse : Formation des analystes sur les outils de visualisation et d\\'analyse.</p>')">
+                <div class="bubble" onclick="showInfo('Traitement des Données', '<p>Le traitement des données permet de convertir des informations brutes en insights exploitables pour une prise de décision stratégique.</p><p><strong>Exemple d\\'intégration :</strong> Une entreprise peut utiliser des outils de traitement de données pour analyser les avis des clients en ligne et identifier les tendances et les besoins. Un fabricant peut surveiller les données de production en temps réel pour détecter les inefficacités.</p><p><strong>Applications :</strong> analyse des données clients, gestion des performances des machines, visualisation des rapports de vente.</p><p><strong>Bénéfices :</strong> Amélioration des performances opérationnelles, détection rapide des problèmes, meilleure compréhension des clients.</p><p><strong>Formation incluse :</strong> Formation des analystes pour tirer le meilleur parti des outils de traitement et de visualisation des données.</p>')">
                     <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Graphique noir">
                 </div>
             </div>
@@ -213,24 +215,29 @@ enhanced_html_content = """<!DOCTYPE html>
                 <div id="info-content">Cliquez sur une bulle pour afficher les détails.</div>
             </div>
         </section>
-        <section id="pricing" class="pricing">
+        <section id="pricing" class="section">
             <h2>Tarifs</h2>
+            <p>Cliquez sur un tarif pour afficher plus d'informations :</p>
             <div class="pricing-table">
-                <div class="pricing-card">
+                <div class="pricing-card" onclick="showPricingInfo('Analyse Prédictive - 200 €', '<p>Cette solution inclut une formation complète et des modèles avancés pour analyser les données passées et anticiper les tendances futures. Idéal pour optimiser les ressources humaines, prévoir la demande et réduire les coûts.</p><p><strong>Bénéfices :</strong> Réduction des coûts, amélioration des performances, meilleure prise de décision grâce à des informations basées sur des données fiables.</p><p><strong>Formation incluse :</strong> Formation des responsables aux outils de prévision avancés.</p>')">
                     <h3>Analyse Prédictive</h3>
-                    <p>Modèles prédictifs avancés pour votre entreprise, accompagnés de formation.</p>
+                    <p>Modèles avancés pour votre entreprise.</p>
                     <p class="price">200 €</p>
                 </div>
-                <div class="pricing-card">
+                <div class="pricing-card" onclick="showPricingInfo('Automatisation des Tâches - 300 €', '<p>Offre un gain de productivité en automatisant les processus répétitifs, tout en réduisant les erreurs humaines. Support technique inclus pour garantir une intégration optimale.</p><p><strong>Bénéfices :</strong> Augmentation de la productivité, réduction des délais d\\'exécution, minimisation des erreurs humaines.</p><p><strong>Formation incluse :</strong> Formation des équipes pour gérer et optimiser les workflows automatisés.</p>')">
                     <h3>Automatisation des Tâches</h3>
-                    <p>Automatisation intelligente pour des processus plus efficaces, avec support technique.</p>
+                    <p>Automatisation intelligente pour des processus plus efficaces.</p>
                     <p class="price">300 €</p>
                 </div>
-                <div class="pricing-card">
+                <div class="pricing-card" onclick="showPricingInfo('Traitement des Données - 250 €', '<p>Utilisez des outils avancés pour extraire des insights exploitables de vos données, améliorant ainsi vos performances opérationnelles et stratégiques.</p><p><strong>Bénéfices :</strong> Amélioration des performances opérationnelles, détection rapide des problèmes, meilleure compréhension des clients.</p><p><strong>Formation incluse :</strong> Formation des analystes pour tirer le meilleur parti des outils de traitement et de visualisation des données.</p>')">
                     <h3>Traitement des Données</h3>
-                    <p>Outils avancés pour analyser et visualiser vos données, avec formation spécialisée.</p>
+                    <p>Outils avancés pour analyser et visualiser vos données.</p>
                     <p class="price">250 €</p>
                 </div>
+            </div>
+            <div class="info">
+                <h3 id="pricing-info-title">Informations</h3>
+                <div id="pricing-info-content">Cliquez sur un tarif pour afficher les détails.</div>
             </div>
         </section>
         <section id="contact" class="section">
@@ -239,13 +246,12 @@ enhanced_html_content = """<!DOCTYPE html>
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Smart AI Integration. Tous droits réservés.</p>
+        <p>&copy; 2025 AI Integration. Tous droits réservés.</p>
     </footer>
 </body>
-</html>
-"""
+</html>"""
 
-with open(enhanced_file_path, "w") as file:
-    file.write(enhanced_html_content)
+with open(updated_html_path, "w") as file:
+    file.write(updated_html_content)
 
-enhanced_file_path
+updated_html_path
